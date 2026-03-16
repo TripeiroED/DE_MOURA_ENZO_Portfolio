@@ -1,211 +1,281 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Présentation - DE MOURA Enzo</title>
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
-    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet" />
-    <style>
-        @import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@400;700&display=swap');
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+<title>Présentation - DE MOURA Enzo</title>
 
-        :root {
-            --valorant-red: #8746ff;
-            --valorant-black: #0d0d0d;
-            --valorant-dark-gray: #1f1f1f;
-            --valorant-light-gray: #2a2a2a;
-            --valorant-white: #eaeaea;
-            --valorant-accent: #8746ff;
-        }
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;700&display=swap" rel="stylesheet">
 
-        body {
-            font-family: 'Exo 2', sans-serif;
-            background: linear-gradient(135deg, var(--valorant-black) 0%, var(--valorant-dark-gray) 100%);
-            color: var(--valorant-white);
-            overflow-x: hidden;
-            line-height: 1.5;
-            padding-top: 70px;
-            min-height: 100vh;
-        }
+<link rel="stylesheet" href="style.css">
 
-        /* Navigation identique à ton portfolio */
-        nav {
-            position: fixed;
-            top: 0;
-            width: 100%;
-            background: none;
-            backdrop-filter: none;
-            z-index: 1000;
-            padding: 1rem 2rem;
-            border-bottom: none;
-            display: flex;
-            align-items: center;
-            justify-content: space-between;
-        }
+<style>
 
-        .logo {
-            font-family: 'Orbitron', sans-serif;
-            font-size: 2.2rem;
-            color: var(--valorant-red);
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            text-shadow: 0 0 8px var(--valorant-red);
-        }
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
 
-        .nav-links {
-            display: flex;
-            gap: 2rem;
-            list-style: none;
-            align-items: center;
-        }
+:root{
+--valorant-red:#8746ff;
+--valorant-black:#0d0d0d;
+--valorant-dark-gray:#1f1f1f;
+--valorant-light-gray:#2a2a2a;
+--valorant-white:#eaeaea;
+}
 
-        .nav-links li a {
-            color: var(--valorant-white);
-            font-weight: 600;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-            font-size: 1rem;
-            text-decoration: none;
-            transition: color 0.3s ease;
-        }
+body{
+font-family:'Exo 2',sans-serif;
+background:linear-gradient(135deg,var(--valorant-black) 0%,var(--valorant-dark-gray) 100%);
+color:var(--valorant-white);
+padding-top:80px;
+min-height:100vh;
+}
 
-        .nav-links li a:hover {
-            color: var(--valorant-red);
-        }
+nav{
+position:fixed;
+top:0;
+width:100%;
+padding:1rem 2rem;
+display:flex;
+justify-content:space-between;
+align-items:center;
+z-index:1000;
+}
 
-        /* Main content */
-        main {
-            max-width: 800px;
-            margin: 2rem auto 4rem auto;
-            background: var(--valorant-light-gray);
-            padding: 2rem;
-            border-radius: 10px;
-            box-shadow: 0 0 20px var(--valorant-red);
-        }
+.logo{
+font-family:'Orbitron',sans-serif;
+font-size:2rem;
+color:var(--valorant-red);
+letter-spacing:3px;
+text-shadow:0 0 8px var(--valorant-red);
+}
 
-        h1 {
-            font-family: 'Orbitron', sans-serif;
-            font-size: 3rem;
-            color: var(--valorant-red);
-            letter-spacing: 4px;
-            text-transform: uppercase;
-            margin-bottom: 1rem;
-            text-align: center;
-        }
+.nav-links{
+display:flex;
+gap:2rem;
+list-style:none;
+}
 
-        h2 {
-            color: var(--valorant-red);
-            margin-bottom: 1rem;
-            text-transform: uppercase;
-            letter-spacing: 3px;
-            border-bottom: 2px solid var(--valorant-red);
-            padding-bottom: 0.3rem;
-        }
+.nav-links a{
+color:var(--valorant-white);
+text-decoration:none;
+font-weight:600;
+transition:0.3s;
+}
 
-        p {
-            font-size: 1.1rem;
-            margin-bottom: 1.5rem;
-            color: #ccc;
-            line-height: 1.6;
-        }
+.nav-links a:hover{
+color:var(--valorant-red);
+}
 
-        ul {
-            list-style-type: disc;
-            padding-left: 1.5rem;
-            color: #ccc;
-        }
+/* MAIN */
 
-        ul li {
-            margin-bottom: 0.7rem;
-        }
+main{
+max-width:1100px;
+margin:auto;
+padding:2rem;
+}
 
-        /* Footer */
-        footer {
-            background: var(--valorant-black);
-            padding: 2rem;
-            text-align: center;
-            border-top: 3px solid var(--valorant-red);
-            box-shadow: 0 -3px 10px rgba(255, 70, 85, 0.4);
-            color: var(--valorant-white);
-            user-select: none;
-        }
+h1{
+font-family:'Orbitron',sans-serif;
+text-align:center;
+font-size:3rem;
+color:var(--valorant-red);
+margin-bottom:3rem;
+text-shadow:0 0 10px var(--valorant-red);
+}
 
-        a {
-            color: var(--valorant-red);
-            text-decoration: underline;
-        }
-        a:hover {
-            color: #b07aff;
-        }
+/* GRID */
 
-        /* Responsive */
-        @media (max-width: 768px) {
-            nav {
-                padding: 1rem;
-            }
-            .nav-links {
-                gap: 1rem;
-            }
-            main {
-                margin: 1rem;
-                padding: 1rem;
-            }
-        }
-    </style>
+.about-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:2rem;
+}
+
+/* CARDS */
+
+.card{
+background:var(--valorant-light-gray);
+padding:2rem;
+border-radius:10px;
+border:2px solid transparent;
+transition:0.3s;
+}
+
+.card:hover{
+border-color:var(--valorant-red);
+transform:translateY(-5px);
+box-shadow:0 10px 25px rgba(135,70,255,0.4);
+}
+
+.card h2{
+color:var(--valorant-red);
+margin-bottom:1rem;
+text-transform:uppercase;
+letter-spacing:2px;
+}
+
+.card p{
+color:#ccc;
+line-height:1.6;
+}
+
+.card ul{
+padding-left:1.2rem;
+}
+
+.card li{
+margin-bottom:0.6rem;
+color:#ccc;
+}
+
+/* STATS */
+
+.stats{
+display:flex;
+justify-content:space-around;
+margin-top:3rem;
+text-align:center;
+flex-wrap:wrap;
+gap:2rem;
+}
+
+.stats h3{
+font-size:2rem;
+color:var(--valorant-red);
+}
+
+/* FOOTER */
+
+footer{
+margin-top:4rem;
+background:var(--valorant-black);
+padding:2rem;
+text-align:center;
+border-top:2px solid var(--valorant-red);
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+.nav-links{
+flex-direction:column;
+gap:1rem;
+}
+
+}
+
+</style>
+
 </head>
+
 <body>
 
-    <!-- Navigation identique -->
-    <nav>
-        <div class="logo">Portfolio</div>
-        <ul class="nav-links">
-            <li><a href="index.html">Accueil</a></li>
-            <li><a href="presentation.html">Présentation</a></li>
-            <li><a href="index.html#projects">Projets</a></li>
-            <li><a href="index.html#skills">Compétences</a></li>
-            <li><a href="veille.html">Veille</a></li>
-            <li><a href="synthese.html">Synthèse</a></li>
-            <li><a href="index.html#contact">Contact</a></li>
-        </ul>
-    </nav>
+<nav>
 
-    <main>
-        <h1>De Moura Enzo</h1>
-        <section>
-            <h2>À propos de moi</h2>
-            <p>Actuellement étudiant en BTS Services Informatiques aux Organisations (SIO), option Solutions Logicielles et Applications Métiers (SLAM), je développe mes compétences en conception, développement et maintenance d’applications informatiques adaptées aux besoins des entreprises.</p>
-        </section>
+<div class="logo">Portfolio</div>
 
-        <section>
-            <h2>Mes compétences</h2>
-            <ul>
-                <li>Développement web : HTML, CSS, JavaScript, PHP</li>
-                <li>Programmation orientée objet : Java, C#</li>
-                <li>Gestion de bases de données : MySQL, SQL Server</li>
-                <li>Frameworks et outils : React, Node.js, Git</li>
-                <li>Conception UML et analyse des besoins</li>
-            </ul>
-        </section>
+<ul class="nav-links">
+<li><a href="index.html">Accueil</a></li>
+<li><a href="presentation.html">Présentation</a></li>
+<li><a href="index.html#projects">Projets</a></li>
+<li><a href="index.html#skills">Compétences</a></li>
+<li><a href="veille.html">Veille</a></li>
+<li><a href="synthese.html">Synthèse</a></li>
+<li><a href="index.html#contact">Contact</a></li>
+</ul>
 
-        <section>
-            <h2>Mes objectifs</h2>
-            <p>Mon objectif est de devenir développeur d'applications spécialisé dans les solutions métier en entreprise, capable de concevoir des outils performants et intuitifs qui répondent aux attentes des utilisateurs finaux.</p>
-        </section>
+</nav>
 
-        <section>
-            <h2>Contact</h2>
-            <p>Vous pouvez me contacter via le formulaire de contact disponible sur le portfolio principal ou par email à <a href="mailto:enzodemoura21@gmail.com">enzodemoura21@gmail.com</a>.</p>
-        </section>
-    </main>
+<main>
 
-    <footer>
-        &copy; 2025 De Moura Enzo - Portfolio BTS SIO SLAM
-    </footer>
+<h1>De Moura Enzo</h1>
+
+<div class="about-grid">
+
+<div class="card">
+<h2>À propos de moi</h2>
+
+<p>
+Je suis actuellement étudiant en <strong>BTS SIO option SLAM</strong>.  
+Je m'intéresse au développement d'applications web et logicielles.
+J'aime concevoir des solutions informatiques utiles, performantes et adaptées aux besoins des entreprises.
+</p>
+
+</div>
+
+<div class="card">
+
+<h2>Compétences</h2>
+
+<ul>
+<li>Développement Web : HTML, CSS, JavaScript, PHP</li>
+<li>Programmation : Java</li>
+<li>Bases de données : MySQL, SQL Server</li>
+<li>Frameworks : React, Node.js</li>
+<li>Outils : Git, GitHub, Docker</li>
+<li>Conception UML et analyse des besoins</li>
+</ul>
+
+</div>
+
+<div class="card">
+
+<h2>Objectifs professionnels</h2>
+
+<p>
+Mon objectif est de devenir développeur d'applications spécialisé dans les solutions métier en entreprise.
+Je souhaite concevoir des applications performantes, intuitives et adaptées aux besoins des utilisateurs.
+</p>
+
+</div>
+
+<div class="card">
+
+<h2>Contact</h2>
+
+<p>
+Email :<br>
+<a href="mailto:enzodemoura21@gmail.com">enzodemoura21@gmail.com</a>
+</p>
+
+</div>
+
+</div>
+
+<div class="stats">
+
+<div>
+<h3>4+</h3>
+<p>Projets réalisés</p>
+</div>
+
+<div>
+<h3>6</h3>
+<p>Langages appris</p>
+</div>
+
+<div>
+<h3>2</h3>
+<p>Années de développement</p>
+</div>
+
+</div>
+
+</main>
+
+<footer>
+
+<p>© 2025 De Moura Enzo - Portfolio BTS SIO SLAM</p>
+
+</footer>
+
 </body>
 </html>
