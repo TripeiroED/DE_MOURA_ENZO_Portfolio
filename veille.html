@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Veille Technologique - Cybersécurité</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@400;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --valorant-red: #8746ff;
+            --valorant-black: #0d0d0d;
+            --valorant-dark-gray: #1f1f1f;
+            --valorant-light-gray: #2a2a2a;
+            --valorant-white: #eaeaea;
+            --valorant-accent: #8746ff;
+        }
+
+        body {
+            font-family: 'Exo 2', sans-serif;
+            background: linear-gradient(135deg, var(--valorant-black) 0%, var(--valorant-dark-gray) 100%);
+            color: var(--valorant-white);
+            overflow-x: hidden;
+            line-height: 1.5;
+            padding-top: 70px;
+            min-height: 100vh;
+        }
+
+        /* Navigation */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: none;
+            backdrop-filter: none;
+            z-index: 1000;
+            padding: 1rem 2rem;
+            border-bottom: none;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2.2rem;
+            color: var(--valorant-red);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            text-shadow: 0 0 8px var(--valorant-red);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 0rem;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-links li a {
+            color: var(--valorant-white);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 1rem;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links li a:hover {
+            color: var(--valorant-red);
+        }
+
+        /* Sections */
+        .section {
+            padding: 50px 2rem 20px 2rem;
+            max-width: 1000px;
+            margin: 0 auto 0px auto;
+            position: relative;
+        }
+
+        .section-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: clamp(2.5rem, 5vw, 2rem);
+            text-transform: uppercase;
+            letter-spacing: 4px;
+            margin-bottom: 1.5rem;
+            color: var(--valorant-red);
+            text-shadow: 0 0 10px var(--valorant-red);
+            display: inline-block;
+            position: relative;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -14px;
+            left: 0;
+            width: 60%;
+            height: 4px;
+            background: var(--valorant-red);
+            border-radius: 2px;
+        }
+
+        p {
+            color: #ccc;
+            font-size: 1rem;
+            margin-bottom: 1rem;
+            max-width: 800px;
+        }
+
+        ul {
+            list-style: none;
+            padding-left: 1rem;
+            max-width: 800px;
+        }
+
+        ul li {
+            margin-bottom: 0.7rem;
+            color: #bbb;
+            font-weight: 400;
+            position: relative;
+            padding-left: 1.3rem;
+            font-size: 1rem;
+        }
+
+        ul li::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            color: var(--valorant-red);
+            font-weight: 700;
+        }
+
+        /* Articles grid */
+        .articles-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 1.8rem;
+            margin-top: 2rem;
+        }
+
+        .article-card {
+            background: var(--valorant-light-gray);
+            border: 2px solid transparent;
+            border-radius: 8px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 8px rgba(135, 70, 255, 0.15);
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+        }
+
+        .article-card:hover {
+            border-color: var(--valorant-red);
+            box-shadow: 0 15px 30px rgba(135, 70, 255, 0.4);
+            transform: translateY(-8px);
+        }
+
+        .article-image {
+            height: 160px;
+            background: linear-gradient(135deg, var(--valorant-red), var(--valorant-accent));
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            color: var(--valorant-white);
+            flex-shrink: 0;
+            text-shadow: 0 0 10px rgba(255 255 255 / 0.3);
+        }
+
+        .article-content {
+            padding: 1.5rem 1.5rem 2rem 1.5rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .article-title {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 1.4rem;
+            text-transform: uppercase;
+            letter-spacing: 1.1px;
+            margin-bottom: 0.7rem;
+            color: var(--valorant-white);
+            flex-shrink: 0;
+        }
+
+        .article-description {
+            color: #bbb;
+            flex-grow: 1;
+            line-height: 1.4;
+            margin-bottom: 1.2rem;
+            font-weight: 400;
+        }
+
+        .article-links {
+            margin-top: auto;
+        }
+
+        .article-link {
+            color: var(--valorant-red);
+            text-decoration: none;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 0.7px;
+            transition: all 0.3s ease;
+        }
+
+        .article-link:hover {
+            color: var(--valorant-white);
+            text-shadow: 0 0 15px var(--valorant-red);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            .section {
+                padding: 50px 1rem 30px 1rem;
+                margin-bottom: 30px;
+            }
+
+            .articles-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav>
+        <div class="logo">Portfolio</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="presentation.html">Présentation</a></li>
+            <li><a href="index.html#projects">Projets</a></li>
+            <li><a href="index.html#skills">Compétences</a></li>
+            <li><a href="veille.html">Veille</a></li>
+            <li><a href="synthese.html">Synthèse</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Intro Section -->
+    <section class="section">
+        <h2 class="section-title">C'est quoi une veille technologique ?</h2>
+        <p>
+            La veille technologique, élément de la veille stratégique, consiste à surveiller et s’informer en continu sur les nouveautés du secteur, 
+            les inventions des concurrents ainsi que les nouvelles technologies dans le but d’être à jour dans son domaine.
+        </p>
+        <p>
+            Elle comprend la surveillance, la collecte, le partage et la diffusion d’informations permettant d’anticiper ou de s’informer sur des changements 
+            en matière de recherche, développement, brevet, lancement de nouveaux produits, matériaux, processus, concepts, innovations, etc.
+        </p>
+        <p>
+            L’objectif principal est de rester informé pour anticiper les évolutions futures, saisir les opportunités et éviter les risques potentiels.
+        </p>
+    </section>
+
+    <!-- Sujet -->
+    <section class="section">
+        <h2 class="section-title">Sujet de ma veille</h2>
+        <p>
+            J’ai choisi de me concentrer sur <strong>les tendances en matière de sécurité des réseaux et des systèmes</strong> :  
+            examiner les menaces émergentes, les techniques de protection avancées telles que la détection des menaces basée sur l'IA, 
+            ainsi que les politiques de sécurité.
+        </p>
+    </section>
+
+    <!-- Outils et sources -->
+    <section class="section">
+        <h2 class="section-title">Outils et sources</h2>
+        <ul>
+            <li><strong>Silicon</strong> — site d’actualités informatique et high-tech pour les professionnels.</li>
+            <li><strong>Threatpost</strong> — média spécialisé en cybersécurité, infos sur menaces et vulnérabilités.</li>
+            <li><strong>CyberScoop</strong> — reportages et actualités sur les avancées technologiques en cybersécurité.</li>
+            <li><strong>Feedly</strong> — agrégateur de flux RSS, permettant de s’abonner à de nombreux sites.</li>
+            <li>Newsletter <strong>TLDR</strong> pour une veille quotidienne.</li>
+        </ul>
+    </section>
+
+    <!-- Articles récents -->
+    <section class="section">
+        <h2 class="section-title">Articles récents</h2>
+        <div class="articles-grid">
+            <article class="article-card">
+                <div class="article-image">
+                    <i class="fas fa-shield-alt"></i>
+                </div>
+                <div class="article-content">
+                    <h3 class="article-title">Attaques par Ransomware en hausse en 2025</h3>
+                    <p class="article-description">
+                        Le nombre d'attaques par ransomware a connu une augmentation significative cette année, ciblant particulièrement les PME. 
+                        Les experts recommandent une stratégie de sauvegarde régulière et une sensibilisation accrue du personnel.
+                    </p>
+                    <div class="article-links">
+                        <a href="https://www.zdnet.fr/actualites/cybersecurite-attaques-ransomware-2025-39860178.html" target="_blank" rel="noopener noreferrer" class="article-link">
+                            Lire l'article
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="article-card">
+                <div class="article-image">
+                    <i class="fas fa-user-secret"></i>
+                </div>
+                <div class="article-content">
+                    <h3 class="article-title">Nouvelles vulnérabilités Zero-Day découvertes</h3>
+                    <p class="article-description">
+                        Plusieurs failles zero-day ont été identifiées dans des logiciels populaires, augmentant le risque d'attaques ciblées. 
+                        Les mises à jour de sécurité sont cruciales pour prévenir toute exploitation.
+                    </p>
+                    <div class="article-links">
+                        <a href="https://www.cyberscoop.com/zero-day-vulnerabilities-2025/" target="_blank" rel="noopener noreferrer" class="article-link">
+                            En savoir plus
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="article-card">
+                <div class="article-image">
+                    <i class="fas fa-lock"></i>
+                </div>
+                <div class="article-content">
+                    <h3 class="article-title">L'importance de l'authentification multifactorielle</h3>
+                    <p class="article-description">
+                        L'authentification multifactorielle (MFA) devient la norme pour sécuriser les accès. 
+                        De nombreuses entreprises adoptent cette technologie pour réduire les risques liés aux mots de passe compromis.
+                    </p>
+                    <div class="article-links">
+                        <a href="https://www.csoonline.com/article/3605696/why-mfa-is-essential-in-2025.html" target="_blank" rel="noopener noreferrer" class="article-link">
+                            Découvrir
+                        </a>
+                    </div>
+                </div>
+            </article>
+
+            <article class="article-card">
+                <div class="article-image">
+                    <i class="fas fa-network-wired"></i>
+                </div>
+                <div class="article-content">
+                    <h3 class="article-title">Sécuriser les infrastructures cloud</h3>
+                    <p class="article-description">
+                        Avec la montée du cloud computing, la sécurisation des infrastructures cloud est primordiale. 
+                        Les bonnes pratiques incluent le chiffrement, la gestion des accès et la surveillance continue.
+                    </p>
+                    <div class="article-links">
+                        <a href="https://www.cloudsecurityalliance.org/research/" target="_blank" rel="noopener noreferrer" class="article-link">
+                            Plus d'infos
+                        </a>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+</body>
+</html>

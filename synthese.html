@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Synthèse – Données / Veille</title>
+  
+  <!-- Polices + FontAwesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;700&display=swap" rel="stylesheet" />
+
+  <style>
+    /* Reset & global */
+    * {
+      margin: 0; padding: 0; box-sizing: border-box;
+    }
+    body {
+      background: linear-gradient(135deg, #0d0d0d 0%, #1f1f1f 100%);
+      color: #eaeaea;
+      font-family: 'Exo 2', sans-serif;
+      line-height: 1.4;
+    }
+
+    /* Nav from main page */
+    nav {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background: none;
+      backdrop-filter: none;
+      z-index: 1000;
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transition: top 0.3s ease;
+    }
+    nav.hidden {
+      top: -80px; /* cache la nav en la remontant */
+    }
+    .logo {
+      font-family: 'Orbitron', sans-serif;
+      font-size: 2.2rem;
+      color: #8746ff;
+      text-transform: uppercase;
+      letter-spacing: 3px;
+      text-shadow: 0 0 8px #8746ff;
+      cursor: default;
+    }
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+      align-items: center;
+    }
+    .nav-links li a {
+      color: #eaeaea;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-size: 1rem;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+    .nav-links li a:hover {
+      color: #8746ff;
+    }
+
+    /* Content padding so nav doesn’t overlap */
+    .content {
+      padding: 100px 2rem 2rem 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    h1 {
+      font-family: 'Orbitron', sans-serif;
+      color: #8746ff;
+      margin-bottom: 1rem;
+      text-shadow: 0 0 10px #8746ff;
+      text-transform: uppercase;
+    }
+
+    p {
+      margin-bottom: 2rem;
+      font-size: 1.1rem;
+      color: #ccc;
+    }
+
+    /* Iframe wrapper */
+    .sheet-wrapper {
+      width: 100%;
+      overflow-x: auto;
+    }
+    iframe {
+      width: 1700px;
+      height: 1200px;
+      border: none;
+      border-radius: 0px;
+      box-shadow: 0 0 25px rgba(135, 70, 255, 0.6);
+    }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      .nav-links {
+        gap: 1rem;
+      }
+      iframe {
+        height: 600px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+  <div class="logo">Portfolio</div>
+  <ul class="nav-links">
+    <li><a href="index.html">Accueil</a></li>
+    <li><a href="presentation.html">Présentation</a></li>
+    <li><a href="index.html#projects">Projets</a></li>
+    <li><a href="index.html#skills">Compétences</a></li>
+    <li><a href="veille.html">Veille</a></li>
+    <li><a href="synthese.html">Synthèse</a></li>
+    <li><a href="index.html#contact">Contact</a></li>
+  </ul>
+</nav>
+
+
+  <div class="content">
+    <h1>Synthèse des données</h1>
+    <p>Voici le tableau synthétisé — les données sont issues de mon Google Sheet, et se mettent à jour automatiquement.</p>
+
+    <div class="sheet-wrapper">
+      <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vQrQm3to_VfDKHKhrsDnzdNlCTtrkLdYCej-aqewGUikGW8KrpdkR0PtV60gMoDBhil8cStv7-4bKyL/pubhtml?gid=1682891541&single=true" allowfullscreen></iframe>
+    </div>
+  </div>
+
+  <script>
+    // Script pour cacher la nav quand on descend, la montrer quand on remonte
+    let lastScrollTop = 0;
+    const navbar = document.getElementById('navbar');
+
+    window.addEventListener('scroll', () => {
+      let scrollTop = window.pageYOffset || document.documentElement.scrollTop;
+      if(scrollTop > lastScrollTop){
+        // scroll vers le bas => cacher nav
+        navbar.classList.add('hidden');
+      } else {
+        // scroll vers le haut => montrer nav
+        navbar.classList.remove('hidden');
+      }
+      lastScrollTop = scrollTop <= 0 ? 0 : scrollTop; // pour éviter négatifs
+    });
+  </script>
+
+</body>
+</html>

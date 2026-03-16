@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Présentation - DE MOURA Enzo</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Exo+2:wght@400;700&display=swap');
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --valorant-red: #8746ff;
+            --valorant-black: #0d0d0d;
+            --valorant-dark-gray: #1f1f1f;
+            --valorant-light-gray: #2a2a2a;
+            --valorant-white: #eaeaea;
+            --valorant-accent: #8746ff;
+        }
+
+        body {
+            font-family: 'Exo 2', sans-serif;
+            background: linear-gradient(135deg, var(--valorant-black) 0%, var(--valorant-dark-gray) 100%);
+            color: var(--valorant-white);
+            overflow-x: hidden;
+            line-height: 1.5;
+            padding-top: 70px;
+            min-height: 100vh;
+        }
+
+        /* Navigation identique à ton portfolio */
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: none;
+            backdrop-filter: none;
+            z-index: 1000;
+            padding: 1rem 2rem;
+            border-bottom: none;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .logo {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 2.2rem;
+            color: var(--valorant-red);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            text-shadow: 0 0 8px var(--valorant-red);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-links li a {
+            color: var(--valorant-white);
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-size: 1rem;
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .nav-links li a:hover {
+            color: var(--valorant-red);
+        }
+
+        /* Main content */
+        main {
+            max-width: 800px;
+            margin: 2rem auto 4rem auto;
+            background: var(--valorant-light-gray);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 0 20px var(--valorant-red);
+        }
+
+        h1 {
+            font-family: 'Orbitron', sans-serif;
+            font-size: 3rem;
+            color: var(--valorant-red);
+            letter-spacing: 4px;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+            text-align: center;
+        }
+
+        h2 {
+            color: var(--valorant-red);
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            border-bottom: 2px solid var(--valorant-red);
+            padding-bottom: 0.3rem;
+        }
+
+        p {
+            font-size: 1.1rem;
+            margin-bottom: 1.5rem;
+            color: #ccc;
+            line-height: 1.6;
+        }
+
+        ul {
+            list-style-type: disc;
+            padding-left: 1.5rem;
+            color: #ccc;
+        }
+
+        ul li {
+            margin-bottom: 0.7rem;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--valorant-black);
+            padding: 2rem;
+            text-align: center;
+            border-top: 3px solid var(--valorant-red);
+            box-shadow: 0 -3px 10px rgba(255, 70, 85, 0.4);
+            color: var(--valorant-white);
+            user-select: none;
+        }
+
+        a {
+            color: var(--valorant-red);
+            text-decoration: underline;
+        }
+        a:hover {
+            color: #b07aff;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            nav {
+                padding: 1rem;
+            }
+            .nav-links {
+                gap: 1rem;
+            }
+            main {
+                margin: 1rem;
+                padding: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation identique -->
+    <nav>
+        <div class="logo">Portfolio</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Accueil</a></li>
+            <li><a href="presentation.html">Présentation</a></li>
+            <li><a href="index.html#projects">Projets</a></li>
+            <li><a href="index.html#skills">Compétences</a></li>
+            <li><a href="veille.html">Veille</a></li>
+            <li><a href="synthese.html">Synthèse</a></li>
+            <li><a href="index.html#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <h1>De Moura Enzo</h1>
+        <section>
+            <h2>À propos de moi</h2>
+            <p>Actuellement étudiant en BTS Services Informatiques aux Organisations (SIO), option Solutions Logicielles et Applications Métiers (SLAM), je développe mes compétences en conception, développement et maintenance d’applications informatiques adaptées aux besoins des entreprises.</p>
+        </section>
+
+        <section>
+            <h2>Mes compétences</h2>
+            <ul>
+                <li>Développement web : HTML, CSS, JavaScript, PHP</li>
+                <li>Programmation orientée objet : Java, C#</li>
+                <li>Gestion de bases de données : MySQL, SQL Server</li>
+                <li>Frameworks et outils : React, Node.js, Git</li>
+                <li>Conception UML et analyse des besoins</li>
+            </ul>
+        </section>
+
+        <section>
+            <h2>Mes objectifs</h2>
+            <p>Mon objectif est de devenir développeur d'applications spécialisé dans les solutions métier en entreprise, capable de concevoir des outils performants et intuitifs qui répondent aux attentes des utilisateurs finaux.</p>
+        </section>
+
+        <section>
+            <h2>Contact</h2>
+            <p>Vous pouvez me contacter via le formulaire de contact disponible sur le portfolio principal ou par email à <a href="mailto:enzodemoura21@gmail.com">enzodemoura21@gmail.com</a>.</p>
+        </section>
+    </main>
+
+    <footer>
+        &copy; 2025 De Moura Enzo - Portfolio BTS SIO SLAM
+    </footer>
+</body>
+</html>
