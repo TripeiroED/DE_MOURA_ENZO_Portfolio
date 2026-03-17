@@ -101,6 +101,28 @@
       box-shadow: 0 0 25px rgba(135, 70, 255, 0.6);
     }
 
+    .cta-button {
+            display: inline-block;
+            padding: 15px 45px;
+            background: var(--valorant-red);
+            color: var(--valorant-white);
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            border: none;
+            cursor: pointer;
+            font-family: 'Orbitron', sans-serif;
+            transition: all 0.3s ease;
+            box-shadow: 0 0 15px var(--valorant-red);
+            border-radius: 4px;
+        }
+
+        .cta-button:hover {
+            background: var(--valorant-accent);
+            box-shadow: 0 0 30px var(--valorant-accent);
+            transform: scale(1.05);
+        }
+
     /* Responsive */
     @media (max-width: 768px) {
       .nav-links {
@@ -136,6 +158,8 @@
       <iframe src="https://docs.google.com/spreadsheets/d/e/2PACX-1vROlO0HhY4BHstsUWSXTmlMU4SzfwYva7TIbCQ2i6zwD7aPxpIwdZRJYXZohyJe6Q/pubhtml?gid=1682891541&amp;single=true&amp;widget=true&amp;headers=false"></iframe>
     </div>
   </div>
+
+  <a href="https://docs.google.com/spreadsheets/d/e/2PACX-1vROlO0HhY4BHstsUWSXTmlMU4SzfwYva7TIbCQ2i6zwD7aPxpIwdZRJYXZohyJe6Q/pubhtml?gid=1682891541&amp;single=true&amp;widget=true&amp;headers=false" class="cta-button">A propos de moi</a>
 
   <script>
     // Script pour cacher la nav quand on descend, la montrer quand on remonte
