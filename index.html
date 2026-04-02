@@ -471,6 +471,11 @@
                 grid-template-columns: 1fr;
             }
         }
+
+        .project-image {
+    position: relative; /* OBLIGATOIRE */
+}
+
     </style>
 </head>
 <body>
@@ -508,6 +513,7 @@
         <div class="projects-grid">
             <div class="project-card fade-in">
                 <div class="project-image">
+                    <div class="project-badge ecole">École</div>
                     <i class="fas fa-laptop-code"></i>
                 </div>
                 <div class="project-content">
@@ -527,7 +533,8 @@
 
             <div class="project-card fade-in">
                 <div class="project-image">
-                    <i class="fas fa-mobile-alt"></i>
+                    <div class="project-badge ecole">École</div>
+                    <i class="fas fa-laptop-code"></i>
                 </div>
                 <div class="project-content">
                     <h3 class="project-title">Sneakhub</h3>
@@ -548,7 +555,8 @@
 
             <div class="project-card fade-in">
                 <div class="project-image">
-                    <i class="fas fa-book"></i>
+                    <div class="project-badge ecole">École</div>
+                    <i class="fas fa-laptop-code"></i>
                 </div>
                 <div class="project-content">
                     <h3 class="project-title">Bibliothèque Web</h3>
@@ -576,6 +584,7 @@
 
             <div class="project-card fade-in">
                 <div class="project-image">
+                    <div class="project-badge entreprise">Entreprise</div>
                     <i class="fas fa-warehouse"></i>
                 </div>
                 <div class="project-content">
@@ -588,8 +597,54 @@
                         <span class="tech-tag">HTML</span>
                         <span class="tech-tag">CSS</span>
                     </div>
+                </div>
+            </div>
+
+            <div class="project-card fade-in">
+                <div class="project-image">
+                    <div class="project-badge perso">Personnel</div>
+                    <i class="fas fa-desktop"></i>
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">Site Vitrine Ybis</h3>
+                    <p class="project-description">
+                        Site vitrine moderne pour une entreprise de services informatiques.
+                        Présentation des prestations,
+                        mise en avant des compétences et formulaire de contact.
+                        Design responsive avec une navigation fluide et une expérience utilisateur optimisée.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">HTML</span>
+                        <span class="tech-tag">CSS</span>
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">WordPress</span>
+                    </div>
                     <div class="project-links">
-                        <a href="#" class="project-link"><i class="fab fa-github"></i> Code</a>
+                        <a href="https://ybis-services.fr/" class="project-link"><i class="fas fa-globe"></i> Site</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="project-card fade-in">
+                <div class="project-image">
+                    <div class="project-badge perso">Personnel</div>
+                    <i class="fas fa-hard-hat"></i>
+                </div>
+                <div class="project-content">
+                    <h3 class="project-title">Site Vitrine - CRTS</h3>
+                    <p class="project-description">
+                        Site vitrine pour une entreprise de bâtiment tous corps d’état.
+                        Présentation des services (maçonnerie, rénovation, électricité, plomberie),
+                        galerie de réalisations et formulaire de contact.
+                        Interface claire et professionnelle adaptée aux clients particuliers et professionnels.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">HTML</span>
+                        <span class="tech-tag">CSS</span>
+                        <span class="tech-tag">JavaScript</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://crts78.com/" class="project-link"><i class="fas fa-globe"></i> Site</a>
                     </div>
                 </div>
             </div>
