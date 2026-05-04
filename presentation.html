@@ -41,17 +41,21 @@ nav{
 position:fixed;
 top:0;
 width:100%;
+background:none;
+backdrop-filter:none;
 padding:1rem 2rem;
 display:flex;
 justify-content:space-between;
 align-items:center;
 z-index:1000;
+border-bottom:none;
 }
 
 .logo{
 font-family:'Orbitron',sans-serif;
-font-size:2rem;
+font-size:2.2rem;
 color:var(--valorant-red);
+text-transform:uppercase;
 letter-spacing:3px;
 text-shadow:0 0 8px var(--valorant-red);
 }
@@ -60,16 +64,20 @@ text-shadow:0 0 8px var(--valorant-red);
 display:flex;
 gap:2rem;
 list-style:none;
+align-items:center;
 }
 
-.nav-links a{
+.nav-links li a{
 color:var(--valorant-white);
 text-decoration:none;
 font-weight:600;
-transition:0.3s;
+text-transform:uppercase;
+letter-spacing:1px;
+font-size:1rem;
+transition:color 0.3s ease;
 }
 
-.nav-links a:hover{
+.nav-links li a:hover{
 color:var(--valorant-red);
 }
 
@@ -184,6 +192,7 @@ gap:1rem;
 
 <ul class="nav-links">
 <li><a href="index.html">Accueil</a></li>
+<li><a href="index.html#parcours">Parcours</a></li>
 <li><a href="presentation.html">Présentation</a></li>
 <li><a href="index.html#projects">Projets</a></li>
 <li><a href="index.html#skills">Compétences</a></li>

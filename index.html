@@ -353,6 +353,95 @@
             font-weight: 700;
         }
 
+        /* =========================
+   PARCOURS (TIMELINE CLEAN)
+========================= */
+
+.parcours {
+    padding: 100px 20px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.parcours-title {
+    text-align: center;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 2.8rem;
+    color: var(--valorant-red);
+    text-transform: uppercase;
+    margin-bottom: 60px;
+    text-shadow: 0 0 15px var(--valorant-red);
+}
+
+/* Ligne centrale */
+.timeline {
+    position: relative;
+    max-width: 900px;
+    margin: auto;
+    padding-left: 40px;
+}
+
+.timeline::before {
+    content: "";
+    position: absolute;
+    left: 18px;
+    top: 0;
+    width: 3px;
+    height: 100%;
+    background: var(--valorant-red);
+    box-shadow: 0 0 15px var(--valorant-red);
+}
+
+/* Bloc étape */
+.timeline-item {
+    position: relative;
+    margin-bottom: 50px;
+}
+
+/* Point */
+.timeline-dot {
+    position: absolute;
+    left: 9px;
+    top: 18px;
+    width: 18px;
+    height: 18px;
+    background: var(--valorant-red);
+    border-radius: 50%;
+    box-shadow: 0 0 12px var(--valorant-red);
+}
+
+/* Card */
+.card {
+    background: var(--valorant-light-gray);
+    padding: 25px;
+    border-radius: 10px;
+    border: 2px solid transparent;
+    transition: 0.3s ease;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+}
+
+/* Hover stylé */
+.card:hover {
+    transform: translateX(10px);
+    border-color: var(--valorant-red);
+    box-shadow: 0 0 25px rgba(135, 70, 255, 0.6);
+}
+
+/* Titre */
+.card h2 {
+    font-family: 'Orbitron', sans-serif;
+    color: var(--valorant-red);
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+/* Texte */
+.card p {
+    color: #ccc;
+    line-height: 1.6;
+}
+
+
         /* Contact Section */
         .contact-form {
             max-width: 600px;
@@ -484,6 +573,7 @@
         <div class="logo">Portfolio</div>
         <ul class="nav-links">
             <li><a href="index.html">Accueil</a></li>
+            <li><a href="index.html#parcours">Parcours</a></li>
             <li><a href="presentation.html">Présentation</a></li>
             <li><a href="index.html#projects">Projets</a></li>
             <li><a href="index.html#skills">Compétences</a></li>
@@ -504,6 +594,49 @@
             <h1 class="hero-title">De Moura Enzo</h1>
             <p class="hero-subtitle">Développeur Web / BTS SIO SLAM</p>
             <a href="presentation.html" class="cta-button">A propos de moi</a>
+        </div>
+    </section>
+
+    <section class="parcours" id="parcours">
+        <h1 class="parcours-title">Mon Parcours</h1>
+    
+        <div class="timeline">
+    
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="card">
+                    <h2>Bac Général</h2>
+                    <p>
+                        J’ai effectué un baccalauréat général avec les spécialités mathématiques et sciences économiques et
+                        sociales.
+                        À cette période, je n’étais pas encore orienté vers l’informatique.
+                    </p>
+                </div>
+            </div>
+    
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="card">
+                    <h2>Déclic en Terminale</h2>
+                    <p>
+                        En terminale, j’ai réalisé un projet pour une entreprise : création d’un site web et son
+                        hébergement.
+                        Cette expérience m’a permis de découvrir le développement web et m’a orienté vers ce domaine.
+                    </p>
+                </div>
+            </div>
+    
+            <div class="timeline-item">
+                <div class="timeline-dot"></div>
+                <div class="card">
+                    <h2>BTS SIO SLAM</h2>
+                    <p>
+                        J’ai intégré un BTS SIO option SLAM où j’ai développé des compétences en développement web,
+                        programmation et gestion de bases de données.
+                    </p>
+                </div>
+            </div>
+    
         </div>
     </section>
 
